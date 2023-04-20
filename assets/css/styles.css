@@ -239,6 +239,11 @@ img {
   cursor: pointer;
 }
 
+.nav .nav__button{
+  background-color: var(--title-color);
+  border: none;
+}
+
 /* Show menu */
 
 .show-menu{
@@ -284,7 +289,7 @@ img {
   letter-spacing: 1.5px;
 }
 
-.home_description{
+.home__description{
   margin-bottom: 2.5rem;
 }
 
@@ -320,8 +325,36 @@ img {
 }
 
 /*=============== BUTTON ===============*/
+.button{
+  display: inline-block;
+  background-color: var(--first-color);
+  padding: 18px 32px;
+  border: 2px solid var(--first-color-light);
+  color: var(--title-color-black);
+  font-weight: var(--font-bold);
+  cursor: pointer;
+  transition: background .3s;
+}
 
+.button:hover{
+  background-color: var(--first-color-alt);
+}
 
+.button i{
+  font-size: 1.25rem;
+  transition: transform 3.s;
+}
+
+.button__flex{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: .5rem;
+}
+
+.button__flex:hover i{
+  transform: translateX(.25rem)
+}
 /*=============== LOGOS ===============*/
 
 
