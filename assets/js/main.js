@@ -54,6 +54,56 @@ window.addEventListener('scroll', scrollHeader)
 
 
 /*=============== CALCULATE JS ===============*/
+const calculateForm = document.getElementById('calculate-form'),
+    calculateCm = document.getElementById('calculate-cm'),
+    calculateKg = document.getElementById('calculate-kg'),
+    calculateMessage = document.getElementById('calculate-message')
 
+const calculateImc = (e) =>{
+    e.preventDefault()
+
+    // validando se os campos tem valor 
+    if(calculateCm.value === '' || calculateKg.value === ''){
+        calculateMessage.classList.remove('color-green')
+        calculateMessage.classList.add('color-red')
+
+        // imprimindo mensagem
+        calculateMessage.textContent = 'Digite seu peso e altura 👨🏾‍💻'
+
+        // removendo a mensagem após 3s
+        setTimeout(() => {
+            calculateMessage.textContent = ''
+        }, 3000);
+    } else {
+        // formula do IMC
+        const cm = calculateCm.value / 100,
+            kg = calculateKg.value,
+            imc = Math.round(kg / (cm * cm))
+
+        // imprimir o IMC
+        if(imc < 18.5){
+            // adicionar cor e imprimir mensagem
+            calculateMessage.classList.add('color-green')
+            calculateMessage.textContent = 'O seu IMC é: ' +imc+ '. Você está magro. 😓' 
+        } else if(imc <25) {
+            calculateMessage.classList.add('color-green')
+            calculateMessage.textContent = 'O seu IMC é: ' +imc+ '. Você está saudável. 🥳' 
+        } else{
+            calculateMessage.classList.add('color-green')
+            calculateMessage.textContent = 'O seu IMC é: ' +imc+ '. Você está sobrepeso. 😓' 
+        }
+
+        // limpando o campo de input
+        calculateCm.value = ''
+        calculateKg.value = ''
+
+        // removendo a mensagem de resposta
+        setTimeout(() =>{
+            calculateMessage.textContent = ''
+        }, 4000)
+    }
+}
+
+calculateForm.addEventListener('submit', calculateImc)
 
 /*=============== EMAIL JS ===============*/
