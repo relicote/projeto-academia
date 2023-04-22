@@ -107,3 +107,49 @@ const calculateImc = (e) =>{
 calculateForm.addEventListener('submit', calculateImc)
 
 /*=============== EMAIL JS ===============*/
+const contactForm = document.getElementById('contact-form'),
+    contactMessage = document.getElementById('contact-message'),
+    contactUser = document.getElementById('contact-user')
+
+const sendEmail = (e) =>{
+    e.preventDefault()
+
+    //validar se o campo tem valor
+    if(contactUser.value == ''){
+        // adicionando e removendo cor
+        contactMessage.classList.remove('color-green')
+        contactMessage.classList.add('color-red')
+
+        // imprimir mensagem
+        contactMessage.textContent = 'Você precisa inserir o seu email 👆🏾'
+
+        // remover a mensagem após 3s
+
+        setTimeout(() =>{
+            contactMessage.textContent = ''
+        }, 3000)
+    } else {
+        // serviceID - templateID - #form -publicKey
+        emailjs.sendForm('service_bbovqfp', 'template_kjrrq2o', '#contact-form', 'N6Diesys_uR-w2uuB')
+            .then(() =>{
+                // imprimir mensagem e adicionar cor
+                contactMessage.classList.add('color-green')
+                contactMessage.textContent = 'Seu cadastro foi realizado com sucesso!! 💪🏾'
+
+                // remover mensagem após 3s
+                setTimeout(() => {
+                    contactMessage.textContent = ''
+                }, 3000)
+
+            }, (error) =>{
+                // erro ao enviar email
+                alert('Ops! Algo deu errado...', error)
+            })
+
+            // limpando campo de input
+            contactUser.value = ''
+
+    }
+}
+
+contactForm.addEventListener('submit', sendEmail)
