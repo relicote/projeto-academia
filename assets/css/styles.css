@@ -309,17 +309,17 @@ img {
 }
 
 .home__triangle-1{
-  width: 105px;
+  width: 205px;
   background-color: var(--first-color);
 }
 
 .home__triangle-2{
-  width: 205px;
+  width: 305px;
   background-color: var(--first-color-alt);
 }
 
 .home__triangle-3{
-  width: 305px;
+  width: 405px;
   background-color: var(--first-color-dark);
 }
 
@@ -509,17 +509,17 @@ img {
 }
 
 .choose__triangle-1{
-  width: 305px;
+  width: 405px;
   background-color: var(--first-color);
 }
 
 .choose__triangle-2{
-  width: 205px;
+  width: 305px;
   background-color: var(--first-color-alt);
 }
 
 .choose__triangle-3{
-  width: 105px;
+  width: 205px;
   background-color: var(--first-color-dark);
 }
 
@@ -884,6 +884,29 @@ img {
 @media screen and (min-width: 768px){
     .nav__menu{
       width: 50%;
+    }
+
+    .home__container,
+    .choose__container{
+      grid-template-columns: repeat(2, 1fr);
+      align-items: center;
+    }
+
+    .home__data{
+      text-align: initial;
+    }
+
+    .logos__container{
+      grid-template-columns: repeat(4,1fr);
+    }
+
+    .program__container{
+      grid-template-columns: repeat(2, 225px);
+      gap: 2.5rem;
+    }
+
+    .choose__content{
+      order: 1;
     }
 }
 
