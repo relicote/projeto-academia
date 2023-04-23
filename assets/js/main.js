@@ -77,6 +77,15 @@ const scrollUp = () =>{
 window.addEventListener('scroll', scrollUp)
 
 /*=============== SCROLL REVEAL ANIMATION ===============*/
+const sr = ScrollRevea({
+    origin: 'top',
+    distance: '60px',
+    duration: '2500',
+    delay: 400,
+})
+
+sr.reveal(`.home__data`)
+
 
 
 /*=============== CALCULATE JS ===============*/
