@@ -892,7 +892,9 @@ img {
       align-items: center;
     }
 
-    .home__data{
+    .home__data,
+    .choose__content .section__data,
+    .choose__description{
       text-align: initial;
     }
 
