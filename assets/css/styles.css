@@ -976,6 +976,10 @@ img {
     padding: 7rem 0 0;
   }
 
+  .section__subtitle{
+    font-size: 2rem;
+  }
+
   .home__container{
     grid-template-columns: repeat(2, max-content);
     align-items: initial;
@@ -992,7 +996,7 @@ img {
 
   .home__img{
     width: 550px;
-    transform: translateX(14rem);
+    transform: translateX(-6rem);
   }
 
   .home__triangle{
@@ -1046,5 +1050,129 @@ img {
 
   .choose__triangle-3{
     width: 145px;
+  }
+
+  .footer{
+    padding-bottom: 3rem;
+  }
+
+  .footer__form{
+    flex-direction: row;
+  }
+
+  .footer__content{
+    column-gap: 5rem;
+  }
+
+  .footer__group{
+    grid-template-columns: repeat(2, max-content);
+    justify-content: space-between;
+    margin-top: 7rem;
+  }
+
+  .footer__social{
+    order: 1;
+  }
+}
+
+@media screen and (min-width: 1150px){
+  .container{
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .home__data{
+    padding-top: 3rem;
+  }
+
+  .home__images{
+    transform: translateX(-12rem);
+  }
+
+  .home__img{
+    width: 700px;
+    transform: translateX(2rem);
+  }
+
+  .home__triangle{
+    height: 995px;
+  }
+
+  .home__triangle-1{
+    width: 205px;
+  }
+
+  .home__triangle-2{
+    width: 505px;
+  }
+
+  .home__triangle-3{
+    width: 705px;
+  }
+
+  .program__container{
+    grid-template-columns: repeat(4, 245px);
+    padding: 2rem 0;
+  }
+
+  .program__card{
+    padding: 2rem;
+  }
+
+  .program__description{
+    font-size: var(--normal-font-size);
+  }
+
+  .choose__container{
+    column-gap: 8rem;
+  }
+
+  .choose__img{
+    width: 450px;
+    margin: 0 0 0 auto;
+  }
+
+  .choose__triangle{
+    height: 880px;
+  }
+
+  .choose__images{
+    position: relative;
+  }
+
+  .choose__data{
+    grid-template-columns: repeat(2, max-content);
+    gap: 2.5rem 8rem;
+  }
+
+  .choose__description{
+    width: 481px;
+    margin-bottom: 3.5rem;
+  }
+
+  .pricing__container{
+    padding-top: 3rem;
+    grid-template-columns: repeat(3, 320px);
+  }
+
+  .price__card{
+    padding: 2rem 3.5rem;
+    row-gap: 2.5rem;
+  }
+
+  .calculate__description{
+    width: 415px;
+  }
+
+  .calculate__form{
+    width: 505px;
+  }
+
+  .calculate__img{
+    width: 300px;
+  }
+
+  .scrollup{
+    right: 3rem;
   }
 }
